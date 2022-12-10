@@ -4,9 +4,13 @@
 const input = document.querySelector('#validation-input');
 input.addEventListener('blur', validation);
 function validation(){
-    if (input.value.length < 6) {
-        input.style.borderColor = "#f44336";
+    input.classList.add('invalid');
+    if (input.value.length === Number(input.getAttribute('data-length'))) {
+        // input.style.borderColor = "#4caf50";
+        input.classList.replace('invalid' , 'valid');
     } else {
-        input.style.borderColor = "#4caf50";
+        // input.style.borderColor = "#f44336";
+        input.classList.replace('valid', 'invalid');
     }
+    console.log(input);
 }
