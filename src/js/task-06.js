@@ -3,7 +3,7 @@
 
 const input = document.querySelector('#validation-input');
 input.addEventListener('blur', validation);
-function validation(evn){
+function validation(){
     if (input.value.length < 6) {
         input.style.borderColor = "#f44336";
     } else {

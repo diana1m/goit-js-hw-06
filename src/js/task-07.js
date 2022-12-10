@@ -5,6 +5,6 @@
 const control = document.querySelector('#font-size-control');
 const text = document.querySelector('#text');
 control.addEventListener('input', changeFontSize);
-function changeFontSize(evn){
+function changeFontSize(){
     text.style.fontSize = `${control.value}px`;
 }
