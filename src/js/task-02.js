@@ -17,14 +17,15 @@ const ingredients = [
 
 
 const list = document.querySelector('#ingredients');
+let fragment = new DocumentFragment ();
 
 const items = ingredients.map(ingredient => {
   const item = document.createElement("li");
   item.textContent = ingredient;
   item.classList.add('item');
-  list.append(item);
-  // return item;
+  fragment.append(item);
+  return item;
 })
 
-// list.append(items);
+list.appendChild(fragment);
 console.log(list);
