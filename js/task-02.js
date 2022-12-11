@@ -23,9 +23,8 @@ const items = ingredients.map(ingredient => {
   const item = document.createElement("li");
   item.textContent = ingredient;
   item.classList.add('item');
-  fragment.append(item);
   return item;
 })
 
-list.appendChild(fragment);
+list.append(...items);
 console.log(list);
