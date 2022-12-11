@@ -17,7 +17,6 @@ const ingredients = [
 
 
 const list = document.querySelector('#ingredients');
-let fragment = new DocumentFragment ();
 
 const items = ingredients.map(ingredient => {
   const item = document.createElement("li");
